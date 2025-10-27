@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>i18n最小验证</title>
+<style>
+.lang-switch{position:absolute;top:1rem;right:1rem;display:flex;gap:.3rem}
+.lang-switch button{border:1px solid #005ce6;background:#fff;color:#005ce6;padding:.3rem .6rem;cursor:pointer}
+.lang-switch button.active{background:#005ce6;color:#fff}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" data-i18n="nav.about">关于我</a>
+  <a href="#" data-i18n="nav.works">作品</a>
+</nav>
+<div class="lang-switch">
+  <button data-lang="zh" class="active">简</button>
+  <button data-lang="ja">日</button>
+  <button data-lang="en">EN</button>
+</div>
+<h1 data-i18n="hero.title">你好，我是刘子安</h1>
+
+<script>
+// 最小 i18n 逻辑
+const res={
+  nav:{
+    about:{zh:"关于我",ja:"About",en:"About"},
+    works:{zh:"作品",ja:"Works",en:"Works"}
+  },
+  hero:{
+    title:{zh:"你好，我是刘子安",ja:"こんにちは、劉子安です",en:"Hi, I'm Liu Zian"}
+  }
+};
+let cur=localStorage.getItem('lang')||'zh';
+applyLang(cur);
+document.querySelectorAll('.lang-switch button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    cur=b.dataset.lang;
+    localStorage.setItem('lang',cur);
+    applyLang(cur);
+  });
+});
+function applyLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.dataset.i18n;
+    const txt=key.split('.').reduce((o,k)=>o[k],res)[lang];
+    if(txt)el.textContent=txt;
+  });
+  document.querySelectorAll('.lang-switch button').forEach(btn=>{
+    btn.classList.toggle('active',btn.dataset.lang===lang);
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="meta.title">劉 | HomePage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="刘鑫的个人主页，记录学习、项目与思考">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="LX_HomePage.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="#home" class="logo">X.L</a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#works" data-i18n="nav.works">Works</a>
+                <a href="#notes" data-i18n="nav.notes">Notes</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+
+            <div class="lang-switch">
+                <button data-lang="zh" class="active">CN</button>
+                <button data-lang="ja">JP</button>
+                <button data-lang="en">EN</button>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="切换导航">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="assets/avatar.jpg" alt="avatar" class="hero-avatar">
+                <h1 data-i18n="hero.title"><span class="name"></span></h1>
+                <p data-i18n="hero.bio"></p>
+                <div class="hero-social">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="mailto:lza@example.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                    <a href="#" aria-label="WeChat"><i class="bi bi-wechat"></i></a>
+                </div>
+                <a href="#about" class="btn-scroll" data-scroll>Scroll ↓</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 data-i18n="about.h2" class="section-title"></h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p data-i18n="about.desc"><span class="highlight"></span></p>
+                        <ul class="skills-list">
+                            <li>JavaScript / TypeScript</li>
+                            <li>Vue & Angular & Node.js & jquery</li>
+                            <li data-i18n="about.skills[2]">java / python</li>
+                            <li data-i18n="about.http">springboot / mybatis</li>
+                            <li>idea / Eclipse</li>
+                            <li>MySQL / PostgreSQL / XML</li>
+                        </ul>
+                    </div>
+                    <div class="about-img">
+                        <img src="assets/desk.jpg" alt="desk">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="container">
+                <h2 data-i18n="works.h2" class="section-title">Works</h2>
+                <div class="works-grid">
+                    <article class="work-card">
+                        <img src="assets/work1.jpg" alt="project">
+                        <div class="work-info">
+                            <h3>商品管理システム</h3>
+                            <!-- <p data-i18n="works.p1"></p> -->
+                            <p>商品の基本情報やサンプル、SKUを一元管理するシステム。効率的なデータ管理を実現。</p>
+                            <p>【担当業務】
+                                ・ビジネスルールの実装
+                                ・JavaScriptによるバッチ処理開発
+                                ・詳細設計～結合テスト</p>
+                            <a class="link-arrow" href="https://github.com" target="_blank">
+                                <span data-i18n="works.view"></span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="assets/work2.jpg" alt="project">
+                        <div class="work-info">
+                            <h3>大手銀行のローンシステム開発</h3>
+                            <!-- <p data-i18n="works.p2"></p> -->
+                            <p>複数ローンのシステム統合</p>
+                            <p>【担当業務】
+                                ・基本設計検証・カスタマイズ
+                                ・設計書作成
+                                ・製造～総合試験</p>
+                            <a class="link-arrow" href="https://github.com" target="_blank">
+                                <span data-i18n="works.view"></span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="assets/work3.jpg" alt="project">
+                        <div class="work-info">
+                            <h3>AI回答できるシステム</h3>
+                            <!-- <p data-i18n="works.p2"></p> -->
+                            <p>OpenAIに基づいてお客様は保険に関する問題を回答できるシステム</p>
+                            <p>【担当業務】
+                                ・主に画面全体の設計、製造
+                                ・現新突合、古いシステムと現在のシステムで異なる所を調査と修正</p>
+                            <a class="link-arrow" href="https://github.com" target="_blank">
+                                <span data-i18n="works.view"></span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="assets/work4.jpg" alt="project">
+                        <div class="work-info">
+                            <h3>スマートフォン受付システム</h3>
+                            <!-- <p data-i18n="works.p2"></p> -->
+                            <p>スマートフォンの簡単手続き・元々の古いシステムに書き換えるためのシステム・機能はスマートフォンの機種変更と情報変更・お客様に向けて操作するシステム</p>
+                            <p>【担当業務】
+                                ・影響調査、詳細設計書の作成、フロントエンド開発、製造、単体試験、シナリオの作成または実施
+                                ・メンバーフォロー</p>
+                            <a class="link-arrow" href="https://github.com" target="_blank">
+                                <span data-i18n="works.view"></span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="assets/work5.jpg" alt="project">
+                        <div class="work-info">
+                            <h3>某コンビニ商品システム</h3>
+                            <p data-i18n="works.p2"></p>
+                            <p>商品詳細・資料管理の追加・削除・表示・検索など機能を行うシステム</p>
+                            <p>【担当業務】
+                                ・新規画面作成
+                                ・フロントエンド詳細設計～統合テスト
+                                ・障害修正</p>
+                            <a class="link-arrow" href="https://github.com" target="_blank">
+                                <span data-i18n="works.view"></span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="notes" class="notes">
+        <div class="container">
+            <h2 data-i18n="notes.h2" class="section-title">Learning Notes</h2>
+            <div class="notes-list">
+                <a class="note-item" href="notes/http3-QUIC.html">
+                    <time>2025-10-15</time>
+                    <h3 data-i18n="notes.t1"></h3>
+                    <p data-i18n="notes.d1"></p>
+                </a>
+                <a class="note-item" href="notes/rust-ownership.html">
+                    <time>2025-09-28</time>
+                    <h3 data-i18n="notes.t2"></h3>
+                    <p data-i18n="notes.d2"></p>
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 data-i18n="contact.h2" class="section-title"></h2>
+                <p data-i18n="contact.tip"></p>
+                <a class="btn-primary" href="mailto:lza@example.com" data-i18n="contact.btn"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <small>&copy; <span id="year"></span> <span data-i18n="footer.name"></span> | <span
+                    data-i18n="footer.built"></span></small>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="LX_HomePage.js"></script>
+</body>
+
+</html>
