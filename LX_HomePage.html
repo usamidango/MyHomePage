@@ -153,23 +153,153 @@
             </div>
         </section>
 
-        <!-- <section id="notes" class="notes">
-        <div class="container">
-            <h2 data-i18n="notes.h2" class="section-title">Learning Notes</h2>
-            <div class="notes-list">
-                <a class="note-item" href="notes/http3-QUIC.html">
-                    <time>2025-10-15</time>
-                    <h3 data-i18n="notes.t1"></h3>
-                    <p data-i18n="notes.d1"></p>
-                </a>
-                <a class="note-item" href="notes/rust-ownership.html">
-                    <time>2025-09-28</time>
-                    <h3 data-i18n="notes.t2"></h3>
-                    <p data-i18n="notes.d2"></p>
-                </a>
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">技能統計</h2>
+                <div class="table-container">
+                    <table class="skills-table">
+                        <thead>
+                            <tr>
+                                <th>技術カテゴリ</th>
+                                <th>技術名</th>
+                                <th>習熟度</th>
+                                <th>使用年数</th>
+                                <th>プロジェクト数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">フロントエンド</td>
+                                <td>JavaScript/TypeScript</td>
+                                <td>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%"></div>
+                                    </div>
+                                    <span>90%</span>
+                                </td>
+                                <td>5年</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Vue.js</td>
+                                <td>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 85%"></div>
+                                    </div>
+                                    <span>85%</span>
+                                </td>
+                                <td>4年</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Angular</td>
+                                <td>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%"></div>
+                                    </div>
+                                    <span>80%</span>
+                                </td>
+                                <td>1年</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">バックエンド</td>
+                                <td>Java/SpringBoot</td>
+                                <td>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 85%"></div>
+                                    </div>
+                                    <span>85%</span>
+                                </td>
+                                <td>3年</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Python</td>
+                                <td>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 75%"></div>
+                                    </div>
+                                    <span>75%</span>
+                                </td>
+                                <td>0.5年</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>データベース</td>
+                                <td>MySQL/PostgreSQL</td>
+                                <td>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 80%"></div>
+                                    </div>
+                                    <span>80%</span>
+                                </td>
+                                <td>5年</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-    </section> -->
+        </section>
+
+        <section id="notes" class="notes">
+            <div class="container">
+                <h2 data-i18n="notes.h2" class="section-title">学習ノート</h2>
+                <div class="notes-container">
+                    <ul class="notes-list">
+                        <li class="note-item">
+                            <a href="notes/http3-QUIC.html">
+                                <div class="note-date">2025-10-15</div>
+                                <h3 data-i18n="notes.t1">HTTP/3 と QUIC プロトコル</h3>
+                                <p data-i18n="notes.d1">次世代Webプロトコルの仕組みと性能向上のメカニズムについて詳細に学習</p>
+                                <ul class="note-tags">
+                                    <li>ネットワーク</li>
+                                    <li>プロトコル</li>
+                                    <li>性能最適化</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="note-item">
+                            <a href="notes/rust-ownership.html">
+                                <div class="note-date">2025-09-28</div>
+                                <h3 data-i18n="notes.t2">Rust の所有権システム</h3>
+                                <p data-i18n="notes.d2">メモリ安全性を保証するRustの所有権概念とその実践的な応用方法</p>
+                                <ul class="note-tags">
+                                    <li>Rust</li>
+                                    <li>システムプログラミング</li>
+                                    <li>メモリ管理</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="note-item">
+                            <a href="notes/microservices.html">
+                                <div class="note-date">2025-08-20</div>
+                                <h3>マイクロサービスアーキテクチャ</h3>
+                                <p>大規模システムにおけるマイクロサービスの設計パターンとベストプラクティス</p>
+                                <ul class="note-tags">
+                                    <li>アーキテクチャ</li>
+                                    <li>マイクロサービス</li>
+                                    <li>分散システム</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="note-item">
+                            <a href="notes/ai-ml-basics.html">
+                                <div class="note-date">2025-07-10</div>
+                                <h3>機械学習の基礎理論</h3>
+                                <p>監督学習、非監督学習、強化学習の基本概念と実装方法の学習記録</p>
+                                <ul class="note-tags">
+                                    <li>機械学習</li>
+                                    <li>AI</li>
+                                    <li>Python</li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
         <section id="contact" class="contact">
             <div class="container">
